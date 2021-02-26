@@ -2,24 +2,23 @@
   <div class="mt-6">
       <v-navigation-drawer
         permanent
-        expand-on-hover
+        v-model="drawer"
+        :mini-variant.sync="mini"
       >
-        <v-list>
-          <v-list-item class="px-2">
-            <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
-            </v-list-item-avatar>
-          </v-list-item>
+      <v-list-item class="px-2">
+        <v-list-item-avatar>
+          <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
+        </v-list-item-avatar>
 
-          <v-list-item link>
-            <v-list-item-content>
-              <v-list-item-title class="title">
-                Sandra Adams
-              </v-list-item-title>
-              <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+        <v-list-item-title>John Leider</v-list-item-title>
+
+        <v-btn
+          icon
+          @click.stop="mini = !mini"
+        >
+          <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+      </v-list-item>
 
         <v-divider></v-divider>
 
@@ -40,12 +39,15 @@
 </template>
 <script>
 export default {
+
   data: () => ({
+    drawer: true,
     items: [
       { title: 'Dashboard', icon: 'mdi-view-dashboard', route: '/' },
       { title: 'Projects', icon: 'mdi-image', route: 'projects' },
       { title: 'Team', icon: 'mdi-help-box', route: 'team' }
-    ]
+    ],
+    mini: true
   })
 }
 </script>
