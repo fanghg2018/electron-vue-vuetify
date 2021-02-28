@@ -1,12 +1,12 @@
 <template>
-  <div class="mt-6">
+  <div class="mt-8">
     <v-navigation-drawer permanent
                          v-model="drawer"
                          :mini-variant.sync="mini"
                          width="200">
-      <v-list-item class="px-2">
+      <v-list-item class="px-2 pt-2">
         <v-list-item-avatar>
-          <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
+          <v-img src="../assets/img/85.jpg"></v-img>
         </v-list-item-avatar>
 
         <v-list-item-title>John Leider</v-list-item-title>
